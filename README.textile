@@ -1,0 +1,1 @@
+Monkey patches I18n so that calls to translate in a locale other than :en, and the translation data is missing, then it will attempt to use the english translation.
