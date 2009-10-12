@@ -8,7 +8,7 @@ module I18n
 				begin
 					translate_without_en_default key, options.merge(:raise => true, :locale => :en)
 				rescue MissingTranslationData
-					e.message
+					options[:raise] ? raise : e.message
 				end
 			end
 			alias_method_chain :translate, :en_default
